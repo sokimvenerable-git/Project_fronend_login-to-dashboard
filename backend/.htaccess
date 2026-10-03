@@ -1,0 +1,5 @@
+# Pass the Authorization header through to PHP (needed on Apache/Laragon)
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
